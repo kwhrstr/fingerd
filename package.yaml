@@ -27,14 +27,32 @@ library:
 
 executables:
   fingerd-exe:
-    main:                Main.hs
-    source-dirs:         app
+    main:                app/Main.hs
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
     - fingerd
+    - bytestring
+    - network
+    - raw-strings-qq
+    - sqlite-simple
+    - text
+    - exceptions
+    - mtl
+    - transformers
+    - either
+
+  debug-exe:
+    main:                app/Debug.hs
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - fingerd
+      - network
 
 tests:
   fingerd-test:

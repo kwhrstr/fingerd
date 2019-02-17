@@ -1,3 +1,6 @@
 .stack-work/
 fingerd.cabal
+.idea
+fingerd.iml
+*.db
 *~
